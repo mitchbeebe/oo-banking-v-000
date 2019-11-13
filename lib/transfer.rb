@@ -17,6 +17,7 @@ class Transfer
     if self.valid?
       self.sender.deposit(-self.amount)
       self.receiver.deposit(self.amount)
+      self.status = 'complete'
     end
   end
 end
