@@ -1,5 +1,6 @@
 class Transfer
   # your code here
+  attr_accessor :sender, :receiver, :status, :amount
   
   def initialize(sender, receiver, status = 'pending', amount)
     @sender = sender
@@ -9,6 +10,6 @@ class Transfer
   end
   
   def valid?
-    
+    self.sender.valid? && self.receiver.valid?
   end
 end
