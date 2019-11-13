@@ -18,6 +18,8 @@ class Transfer
       self.sender.deposit(-self.amount)
       self.receiver.deposit(self.amount)
       self.status = 'complete'
+    elsif self.sender.balance >= self.amount
+      ""
     end
   end
 end
